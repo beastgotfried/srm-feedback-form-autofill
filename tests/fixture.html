@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Course Feedback fixture</title>
+    <style>
+      body { font: 16px sans-serif; }
+      fieldset { margin: 16px; }
+      label { display: inline-block; margin: 8px; }
+    </style>
+  </head>
+  <body>
+    <form id="feedback-form">
+      <fieldset>
+        <legend>Question one</legend>
+        <label><input type="radio" name="question-1" value="poor">Poor</label>
+        <label><input type="radio" name="question-1" value="fair">Fair</label>
+        <label><input type="radio" name="question-1" value="good">Good</label>
+        <label><input type="radio" name="question-1" value="very-good">Very good</label>
+        <label><input type="radio" name="question-1" value="excellent">Excellent</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Question two</legend>
+        <label><input type="radio" name="question-2" value="poor">Poor</label>
+        <label><input type="radio" name="question-2" value="fair">Fair</label>
+        <label><input type="radio" name="question-2" value="good">Good</label>
+        <label><input type="radio" name="question-2" value="very-good">Very good</label>
+        <label><input type="radio" name="question-2" value="excellent">Excellent</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Question three, already answered</legend>
+        <label><input type="radio" name="question-3" value="poor">Poor</label>
+        <label><input type="radio" name="question-3" value="fair">Fair</label>
+        <label><input type="radio" name="question-3" value="good" checked>Good</label>
+        <label><input type="radio" name="question-3" value="very-good">Very good</label>
+        <label><input type="radio" name="question-3" value="excellent">Excellent</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose a course</legend>
+        <label><input type="radio" name="course" value="course-a">Course A</label>
+        <label><input type="radio" name="course" value="course-b">Course B</label>
+        <label><input type="radio" name="course" value="course-c">Course C</label>
+      </fieldset>
+
+      <label>
+        Written feedback
+        <textarea id="comment-blank"></textarea>
+      </label>
+      <label>
+        Existing remarks
+        <textarea id="comment-existing">Keep this text unchanged.</textarea>
+      </label>
+      <label>
+        General feedback response
+        <input id="feedback-response" type="text">
+      </label>
+      <label>
+        Search
+        <input id="search" type="text" placeholder="Search courses">
+      </label>
+      <button id="submit" type="submit">Submit feedback</button>
+    </form>
+    <script>
+      document.querySelector('#feedback-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+        document.body.dataset.submitted = 'true';
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "srm-feedback-filler",
+  "version": "0.3.0",
+  "description": "Tampermonkey helper for SRM Academia Course Feedback ratings and comments.",
+  "author": "beastgotfried+codex",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beastgotfried/srm-feedback-form-autofill.git"
+  },
+  "homepage": "https://github.com/beastgotfried/srm-feedback-form-autofill",
+  "bugs": {
+    "url": "https://github.com/beastgotfried/srm-feedback-form-autofill/issues"
+  },
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "node --check srm-feedback-helper.user.js",
+    "test": "npm run check && node --test tests/userscript.test.js"
+  },
+  "devDependencies": {
+    "happy-dom": "^20.10.6"
+  }
+}
